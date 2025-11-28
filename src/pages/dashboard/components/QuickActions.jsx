@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Icon from 'components/AppIcon';
+import AppIcon from '../../components/AppIcon';
 
 const QuickActions = ({ userRole }) => {
   const navigate = useNavigate();
@@ -98,7 +98,7 @@ const QuickActions = ({ userRole }) => {
             <p className="text-sm text-text-secondary">Common tasks & shortcuts</p>
           </div>
           <button className="p-2 rounded-lg hover:bg-background nav-transition">
-            <Icon name="MoreHorizontal" size={16} color="#757575" />
+            <AppIcon name="MoreHorizontal" size={16} color="#757575" />
           </button>
         </div>
       </div>
@@ -118,13 +118,13 @@ const QuickActions = ({ userRole }) => {
               >
                 <div className="flex items-center space-x-4">
                   <div className={`w-12 h-12 ${colors?.iconBg} rounded-xl flex items-center justify-center flex-shrink-0 shadow-card`}>
-                    <Icon name={action?.icon} size={20} color={colors?.icon} />
+                    <AppIcon name={action?.icon} size={20} color={colors?.icon} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-sm font-semibold text-text-primary">{action?.title}</h4>
                     <p className="text-xs text-text-secondary mt-1">{action?.description}</p>
                   </div>
-                  <Icon name="ChevronRight" size={16} color="#757575" />
+                  <AppIcon name="ChevronRight" size={16} color="#757575" />
                 </div>
               </button>
             );

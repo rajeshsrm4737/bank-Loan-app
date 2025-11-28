@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Icon from 'components/AppIcon';
+import AppIcon from "../../components/AppIcon";
 
 const PendingTasks = ({ userRole }) => {
   const [tasks, setTasks] = useState([
@@ -125,10 +125,10 @@ const PendingTasks = ({ userRole }) => {
           </div>
           <div className="flex items-center space-x-2">
             <button className="p-2 rounded-lg hover:bg-background nav-transition">
-              <Icon name="Plus" size={16} color="#7f8c8d" />
+              <AppIcon name="Plus" size={16} color="#7f8c8d" />
             </button>
             <button className="p-2 rounded-lg hover:bg-background nav-transition">
-              <Icon name="MoreHorizontal" size={16} color="#7f8c8d" />
+              <AppIcon name="MoreHorizontal" size={16} color="#7f8c8d" />
             </button>
           </div>
         </div>
@@ -147,7 +147,7 @@ const PendingTasks = ({ userRole }) => {
                     onClick={() => handleTaskComplete(task?.id)}
                     className="mt-1 p-1 rounded hover:bg-primary-100 nav-transition"
                   >
-                    <Icon 
+                    <AppIcon 
                       name={task?.completed ? 'CheckSquare' : 'Square'} 
                       size={16} 
                       color={task?.completed ? '#27ae60' : '#7f8c8d'} 
@@ -162,7 +162,7 @@ const PendingTasks = ({ userRole }) => {
                         
                         <div className="flex items-center space-x-3 mt-3">
                           <div className="flex items-center space-x-1">
-                            <Icon name={getCategoryIcon(task?.category)} size={12} color="#7f8c8d" />
+                            <AppIcon name={getCategoryIcon(task?.category)} size={12} color="#7f8c8d" />
                             <span className="text-xs text-text-secondary capitalize">{task?.category}</span>
                           </div>
                           
@@ -185,7 +185,7 @@ const PendingTasks = ({ userRole }) => {
                         </span>
                         
                         <button className="p-1 rounded hover:bg-primary-100 nav-transition">
-                          <Icon name="MoreVertical" size={14} color="#7f8c8d" />
+                          <AppIcon name="MoreVertical" size={14} color="#7f8c8d" />
                         </button>
                       </div>
                     </div>
@@ -199,7 +199,7 @@ const PendingTasks = ({ userRole }) => {
         {activeTasks?.length === 0 && (
           <div className="text-center py-8">
             <div className="w-16 h-16 bg-success-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="CheckCircle" size={24} color="#27ae60" />
+              <AppIcon name="CheckCircle" size={24} color="#27ae60" />
             </div>
             <p className="text-text-primary font-medium">All caught up!</p>
             <p className="text-text-secondary text-sm">No pending tasks at the moment</p>
@@ -212,7 +212,7 @@ const PendingTasks = ({ userRole }) => {
             <button className="w-full text-left text-sm text-text-secondary hover:text-text-primary nav-transition">
               <div className="flex items-center justify-between">
                 <span>Completed Tasks ({completedTasks?.length})</span>
-                <Icon name="ChevronDown" size={16} color="#7f8c8d" />
+                <AppIcon name="ChevronDown" size={16} color="#7f8c8d" />
               </div>
             </button>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from 'components/AppIcon';
+import AppIcon from "../../components/AppIcon";
 
 const KPICard = ({ data }) => {
   const { title, value, change, trend, icon, color, description } = data;

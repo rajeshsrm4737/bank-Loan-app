@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Icon from 'components/AppIcon';
+import AppIcon from "../../components/AppIcon";
 
 const RecentActivity = ({ userRole }) => {
   const [activeTab, setActiveTab] = useState('all');
@@ -121,10 +121,10 @@ const RecentActivity = ({ userRole }) => {
           </div>
           <div className="flex items-center space-x-2">
             <button className="p-2 rounded-lg hover:bg-background nav-transition">
-              <Icon name="Filter" size={16} color="#7f8c8d" />
+              <AppIcon name="Filter" size={16} color="#7f8c8d" />
             </button>
             <button className="p-2 rounded-lg hover:bg-background nav-transition">
-              <Icon name="MoreHorizontal" size={16} color="#7f8c8d" />
+              <AppIcon name="MoreHorizontal" size={16} color="#7f8c8d" />
             </button>
           </div>
         </div>
@@ -165,7 +165,7 @@ const RecentActivity = ({ userRole }) => {
             return (
               <div key={activity?.id} className="flex items-start space-x-4 p-3 rounded-lg hover:bg-background nav-transition">
                 <div className={`w-10 h-10 ${colors?.bg} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                  <Icon name={activity?.icon} size={20} color={colors?.icon} />
+                  <AppIcon name={activity?.icon} size={20} color={colors?.icon} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between">
@@ -178,7 +178,7 @@ const RecentActivity = ({ userRole }) => {
                       </div>
                     </div>
                     <button className="p-1 rounded hover:bg-primary-100 nav-transition">
-                      <Icon name="MoreVertical" size={14} color="#7f8c8d" />
+                      <AppIcon name="MoreVertical" size={14} color="#7f8c8d" />
                     </button>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ const RecentActivity = ({ userRole }) => {
         {filteredActivities?.length === 0 && (
           <div className="text-center py-8">
             <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center mx-auto mb-4">
-              <Icon name="Activity" size={24} color="#7f8c8d" />
+              <AppIcon name="Activity" size={24} color="#7f8c8d" />
             </div>
             <p className="text-text-secondary">No recent activity found</p>
           </div>
